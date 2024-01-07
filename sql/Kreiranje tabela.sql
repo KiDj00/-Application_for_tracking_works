@@ -1,0 +1,53 @@
+-- 2nf 1
+CREATE OR REPLACE TRIGGER TR_TIPRADOVA_UPDATE_NAZIV_TIPA_RADA 
+AFTER UPDATE OF nazivTipaRada ON TipRadova 
+FOR EACH ROW 
+DECLARE 
+  v_noviNaziv VARCHAR2(50); 
+  v_tipRadovaId NUMBER; 
+ 
+  PRAGMA AUTONOMOUS_TRANSACTION; 
+BEGIN 
+  v_noviNaziv := :NEW.nazivTipaRada; 
+  v_tipRadovaId:= :NEW.tipRadovaId; 
+ 
+  EXECUTE IMMEDIATE 'ALTER TRIGGER TR_STAVKAPODTIPARADOVA_FORBID_UPDATE_NAZIV_TIPA_RADA DISABLE'; 
+ 
+  UPDATE StavkaPodtipaRadova 
+  SET nazivTipaRada = v_noviNaziv 
+  WHERE tipRadovaId = v_tipRadovaId; 
+ 
+  EXECUTE IMMEDIATE 'ALTER TRIGGER TR_STAVKAPODTIPARADOVA_FORBID_UPDATE_ NAZIV_TIPA_RADA ENABLE'; 
+  COMMIT; 
+END; 
+
+
+
+
+--triger 2nf 2
+CREATE OR REPLACE TRIGGER TR_STAVKAPODTIPARADOVA_INSERT_NAZIV_TIPA_RADA 
+BEFORE INSERT 
+ON StavkaPodtipaRadova
+FOR EACH ROW 
+DECLARE 
+v_nazivTipaRada varchar2 (50); 
+BEGIN 
+SELECT tp.nazivTipaRada
+INTO v_nazivTipaRada
+FROM TipRadova tp 
+WHERE tp.tipRadovaId = :NEW.tipRadovaId; 
+ 
+:NEW.nazivTipaRada:= v_nazivTipaRada; 
+END; 
+
+
+
+--triger 2nf 3 
+CREATE OR REPLACE TRIGGER TR_STAVKAPODTIPARADOVA_FORBID_UPDATE_NAZIV_TIPA_RADA 
+BEFORE UPDATE OF nazivTipaRada ON StavkaPodtipaRadova 
+FOR EACH ROW 
+BEGIN 
+IF :NEW.nazivTipaRada!= :OLD.nazivTipaRada THEN 
+RAISE_APPLICATION_ERROR (-20000, 'Zabranjeno azuriranje kolone nazivTipaRada'); 
+END IF; 
+END; 
