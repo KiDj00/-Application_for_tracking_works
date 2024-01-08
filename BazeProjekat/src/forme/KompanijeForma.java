@@ -5,15 +5,12 @@
 package forme;
 
 import domen.Kompanija;
-import domen.Radnik;
-import domen.RadnikOsnovno;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
 import modelTabele.KompanijaModelTabele;
-import modelTabele.RadniciOsnovnoModelTabele;
 
 /**
  *
@@ -170,7 +167,7 @@ public class KompanijeForma extends javax.swing.JDialog {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         final int selectedRow = tblKom.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati osnovne podatke o Kompaniji koju zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati osnovne podatke o Kompaniji koju želite da izmenite!");
             return;
         }
         KompanijaModelTabele kmt = (KompanijaModelTabele) tblKom.getModel();
@@ -182,7 +179,7 @@ public class KompanijeForma extends javax.swing.JDialog {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         final int selectedRow = tblKom.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate selektovati kompaniju koji zelite da obrisete", "Greska", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Morate izabrati Kompaniju koji želite da obrisete", "Greška", JOptionPane.ERROR_MESSAGE);
             return;
         }
         int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni?", "Potvrda", JOptionPane.YES_NO_OPTION);

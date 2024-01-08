@@ -5,7 +5,6 @@
 package forme;
 
 import domen.PodtipRadova;
-import domen.Radnik;
 import domen.TipRadova;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
@@ -226,12 +225,12 @@ public class AzurirajPodtipRadovaForma extends javax.swing.JDialog {
         pod.setUkupnaCena(pr.getUkupnaCena());
         boolean uspesno = Kontroler.getInstanca().updatePodtipRadova(pod);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili Podtip radova");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Podtip radova");
             PredmerRadovaForma prf = (PredmerRadovaForma) this.getParent();
             prf.prikaziPodtipRadova(tp);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri izmeni Podtipa radova");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Podtipa radova");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

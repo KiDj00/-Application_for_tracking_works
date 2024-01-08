@@ -4,23 +4,15 @@
  */
 package forme;
 
-import domen.Kompanija;
-import domen.Predmer;
-import domen.Radnik;
-import domen.RadnikOsnovno;
+
 import domen.StavkaZapisnika;
-import domen.TipRadova;
 import domen.Zapisnik;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import modelTabele.KompanijaModelTabele;
-import modelTabele.PredmerModelTabele;
-import modelTabele.RadniciOsnovnoModelTabele;
 import modelTabele.StavkaZapisnikaModelTabele;
-import modelTabele.TipRadovaModelTabele;
 import modelTabele.ZapisnikModelTabele;
 
 /**

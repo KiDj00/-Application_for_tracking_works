@@ -4,7 +4,7 @@
  */
 package domen;
 
-import model.Pib;
+import tipovi.Pib;
 
 /**
  *

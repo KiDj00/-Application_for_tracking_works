@@ -8,7 +8,7 @@ import domen.Kompanija;
 import java.awt.Dialog;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.Pib;
+import tipovi.Pib;
 
 /**
  *
@@ -355,12 +355,12 @@ public class AzurirajKompanijuForma extends javax.swing.JDialog {
 
         boolean uspesno = Kontroler.getInstanca().updateKompanija(kompanija);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili Kompaniju");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Kompaniju");
             KompanijeForma kf = (KompanijeForma) this.getParent();
             kf.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri izmeni Kompanije");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Kompanije");
         }
 
     }//GEN-LAST:event_jButton12ActionPerformed

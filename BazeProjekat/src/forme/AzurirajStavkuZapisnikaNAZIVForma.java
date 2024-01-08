@@ -5,16 +5,11 @@
 package forme;
 
 import domen.Kompanija;
-import domen.Radnik;
 import domen.StavkaZapisnika;
 import domen.Zapisnik;
 import java.awt.Dialog;
-import java.math.BigDecimal;
-import java.time.ZoneId;
-import java.util.Date;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.UkupnaCena;
 
 /**
  *

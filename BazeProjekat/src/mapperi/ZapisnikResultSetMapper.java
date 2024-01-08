@@ -11,7 +11,7 @@ import domen.Zapisnik;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *

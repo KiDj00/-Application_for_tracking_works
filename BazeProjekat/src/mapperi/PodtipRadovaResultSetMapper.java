@@ -5,11 +5,9 @@
 package mapperi;
 
 import domen.PodtipRadova;
-import domen.Predmer;
 import domen.TipRadova;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import model.UkupnaCena;
 
 /**
  *

@@ -4,7 +4,6 @@
  */
 package modelTabele;
 
-import domen.Radnik;
 import domen.RadnikOsnovno;
 import java.util.ArrayList;
 import java.util.List;

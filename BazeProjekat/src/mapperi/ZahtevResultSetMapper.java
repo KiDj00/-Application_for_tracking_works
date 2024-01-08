@@ -9,7 +9,6 @@ import domen.Nacelnik;
 import domen.Zahtev;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 
 /**
  *

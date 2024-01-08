@@ -8,13 +8,11 @@ import domen.Kompanija;
 import domen.Mesto;
 import domen.Nacelnik;
 import domen.Narudzbenica;
-import domen.RadnikOsnovno;
 import domen.Zapisnik;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
-import model.Pib;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *

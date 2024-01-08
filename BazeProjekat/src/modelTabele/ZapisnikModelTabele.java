@@ -4,7 +4,6 @@
  */
 package modelTabele;
 
-import domen.PodtipRadova;
 import domen.Zapisnik;
 import java.util.ArrayList;
 import java.util.List;

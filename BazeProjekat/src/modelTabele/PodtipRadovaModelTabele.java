@@ -16,7 +16,7 @@ import javax.swing.table.AbstractTableModel;
 public class PodtipRadovaModelTabele extends AbstractTableModel {
 
     private List<PodtipRadova> lista;
-    private final String[] kolona = {"Tip radova ID", "Podtip radova id", "Naziv podtipa radova", "Ukupna cena"};
+    private final String[] kolona = {"Tip radova ID", "Podtip radova ID", "Naziv podtipa radova", "Ukupna cena"};
 
     public PodtipRadovaModelTabele() {
         lista = new ArrayList<>();

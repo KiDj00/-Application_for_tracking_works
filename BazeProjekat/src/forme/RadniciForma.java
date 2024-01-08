@@ -7,7 +7,6 @@ package forme;
 import domen.Radnik;
 import domen.RadnikDetalji;
 import domen.RadnikOsnovno;
-import domen.StavkaPodtipaRadova;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
@@ -15,7 +14,6 @@ import javax.swing.JOptionPane;
 import logika.Kontroler;
 import modelTabele.RadniciDetaljiModelTabele;
 import modelTabele.RadniciOsnovnoModelTabele;
-import modelTabele.StavkaPodtipaRadovaModelTabele;
 
 /**
  *

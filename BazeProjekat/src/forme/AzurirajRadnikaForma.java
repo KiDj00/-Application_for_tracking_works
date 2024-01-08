@@ -258,12 +258,12 @@ public class AzurirajRadnikaForma extends javax.swing.JDialog {
         radnik.setTelefon(txttel.getText());
         boolean uspesno = Kontroler.getInstanca().updateRadnik(radnik);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili radnika");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili radnika");
             RadniciForma dr = (RadniciForma) this.getParent();
             dr.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri izmeni radnika");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni radnika");
         }
 
 

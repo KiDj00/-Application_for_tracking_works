@@ -5,8 +5,7 @@
 package domen;
 
 import java.time.LocalDate;
-import java.util.Date;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *

@@ -6,10 +6,6 @@ package forme;
 
 import domen.PodtipRadova;
 import domen.StavkaPodtipaRadova;
-import domen.TipRadova;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
 
@@ -289,13 +285,13 @@ public class AzurirajStavkuPodtipaRadovaNAZIVForma extends javax.swing.JDialog {
         spr.setStavkaId(stavka.getStavkaId());
         boolean uspesno = Kontroler.getInstanca().updateStavkaPodtipaRadovaNAZIV(spr);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili Stavku Podtipa radova");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Stavku podtipa radova");
             PredmerRadovaForma prf = (PredmerRadovaForma) this.getParent();
             prf.prikaziPodtipRadova(ptr.getTipradovaId());
             prf.prikaziStavkaPodtipRadova(ptr);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Ne mozete menjati naziv tipa rada!!!");
+            JOptionPane.showMessageDialog(this, "Ne možete menjati naziv tipa rada!!!");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

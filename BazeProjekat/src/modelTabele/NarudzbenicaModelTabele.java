@@ -5,7 +5,6 @@
 package modelTabele;
 
 import domen.Narudzbenica;
-import domen.StavkaPodtipaRadova;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
@@ -17,7 +16,7 @@ import javax.swing.table.AbstractTableModel;
 public class NarudzbenicaModelTabele extends AbstractTableModel {
 
     private List<Narudzbenica> lista;
-    private final String[] kolona = {"Narudzbenica ID", "Cena bez PDV-a", "PDV", "Ukupna cena", "Rok izvrsenja", "Garantni rok", "Nacin plaćanja", "Datum", "Postanski broj mesta:", "Zapisnik ID", "Nacelnik ID", "Kompanija ID"};
+    private final String[] kolona = {"Narudžbenica ID", "Cena bez PDV-a", "PDV", "Ukupna cena", "Rok izvršenja", "Garantni rok", "Način plaćanja", "Datum", "Poštanski broj mesta:", "Zapisnik ID", "Načelnik ID", "Kompanija ID"};
 
     public NarudzbenicaModelTabele() {
         lista = new ArrayList<>();

@@ -4,7 +4,6 @@
  */
 package modelTabele;
 
-import domen.Predmer;
 import domen.TipRadova;
 import java.util.ArrayList;
 import java.util.List;

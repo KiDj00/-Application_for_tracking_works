@@ -4,7 +4,6 @@
  */
 package mapperi;
 
-import domen.RadnikDetalji;
 import domen.RadnikOsnovno;
 import java.sql.ResultSet;
 import java.sql.SQLException;

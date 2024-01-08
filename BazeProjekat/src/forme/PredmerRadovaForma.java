@@ -6,8 +6,6 @@ package forme;
 
 import domen.PodtipRadova;
 import domen.Predmer;
-import domen.Radnik;
-import domen.RadnikOsnovno;
 import domen.StavkaPodtipaRadova;
 import domen.TipRadova;
 import java.awt.Color;
@@ -17,7 +15,6 @@ import javax.swing.JOptionPane;
 import logika.Kontroler;
 import modelTabele.PodtipRadovaModelTabele;
 import modelTabele.PredmerModelTabele;
-import modelTabele.RadniciOsnovnoModelTabele;
 import modelTabele.StavkaPodtipaRadovaModelTabele;
 import modelTabele.TipRadovaModelTabele;
 
@@ -421,7 +418,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         int red = tblPodtip.getSelectedRow();
         if (red == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati predmer!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Podtip radova!");
             return;
         }
         PodtipRadovaModelTabele pmt = (PodtipRadovaModelTabele) tblPodtip.getModel();
@@ -434,7 +431,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         final int selectedRow = tblTipRadova.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati podatke o tipu radovo koji zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Tip radova koji želite da izmenite!");
             return;
         }
         TipRadovaModelTabele trmt = (TipRadovaModelTabele) tblTipRadova.getModel();
@@ -447,7 +444,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void btnPrikaziPodtipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrikaziPodtipActionPerformed
         int red = tblTipRadova.getSelectedRow();
         if (red == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati predmer!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Tip radova!");
             return;
         }
         TipRadovaModelTabele pmt = (TipRadovaModelTabele) tblTipRadova.getModel();
@@ -459,7 +456,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         final int selectedRow = tblPodtip.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati osnovne podatke o radniku koji zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Podtip radova koji želite da izmenite!");
             return;
         }
         PodtipRadovaModelTabele prmt = (PodtipRadovaModelTabele) tblPodtip.getModel();
@@ -478,7 +475,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         final int selectedRow = tblPodtip.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate selektovati podatke podtipa radova koji zelite da obrisete", "Greska", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Morate izabrati Podtip radova koji želite da obrišete!", "Greška", JOptionPane.ERROR_MESSAGE);
             return;
         }
         int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni?", "Potvrda", JOptionPane.YES_NO_OPTION);
@@ -494,7 +491,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
         final int selectedRow = tblStavka.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati Stavku podtipa radova koji zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Stavku podtipa radova koji želite da izmenite!");
             return;
         }
         StavkaPodtipaRadovaModelTabele sptr = (StavkaPodtipaRadovaModelTabele) tblStavka.getModel();
@@ -512,7 +509,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
         final int selectedRow = tblStavka.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate selektovati podatke Stavke podtipa radova koji zelite da obrisete", "Greska", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Morate izabrati Stavku podtipa radova koju želite da obrišete", "Greška", JOptionPane.ERROR_MESSAGE);
             return;
         }
         int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni?", "Potvrda", JOptionPane.YES_NO_OPTION);
@@ -548,7 +545,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         final int selectedRow = tblPodtip.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati osnovne podatke o radniku koji zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Podtip radova koji želite da izmenite!");
             return;
         }
         PodtipRadovaModelTabele prmt = (PodtipRadovaModelTabele) tblPodtip.getModel();
@@ -561,7 +558,7 @@ public class PredmerRadovaForma extends javax.swing.JDialog {
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
         final int selectedRow = tblStavka.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati Stavku podtipa radova koji zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Stavku podtipa radova koji želite da izmenite!");
             return;
         }
         StavkaPodtipaRadovaModelTabele sptr = (StavkaPodtipaRadovaModelTabele) tblStavka.getModel();

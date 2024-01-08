@@ -4,7 +4,6 @@
  */
 package forme;
 
-import com.toedter.calendar.JDateChooser;
 import domen.Kompanija;
 import domen.Mesto;
 import domen.Nacelnik;
@@ -16,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *
@@ -322,6 +321,14 @@ public class DodajNarudzbenicuForma extends javax.swing.JDialog {
 
             return;
         }
+        if (Integer.parseInt(txtcena.getText()) < 0) {
+            JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
+            return;
+        }
+        if (Integer.parseInt(txtpdv.getText()) > 1 || Integer.parseInt(txtpdv.getText()) <= 0) {
+            JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
+            return;
+        }
 
         Narudzbenica n = new Narudzbenica();
         n.setId(Integer.parseInt(txtid.getText()));
@@ -357,12 +364,12 @@ public class DodajNarudzbenicuForma extends javax.swing.JDialog {
         n.setKompanijaId(k);
         boolean uspesno = Kontroler.getInstanca().insertNarudzbenica(n);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Narudzbenicu");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Narudžbenicu");
             NarudzbeniceForma nf = (NarudzbeniceForma) this.getParent();
             nf.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Narudzbenice");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Narudžbenice");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

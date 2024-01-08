@@ -5,7 +5,6 @@
 package forme;
 
 import domen.PodtipRadova;
-import domen.Radnik;
 import domen.TipRadova;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
@@ -217,12 +216,12 @@ public class DodajPodtipRadovaForma extends javax.swing.JDialog {
         pr.setNaziv(txtnaziv.getText());
         boolean uspesno = Kontroler.getInstanca().insertPodtipRadova(pr);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Podtip radva");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Podtip radova");
             PredmerRadovaForma prf = (PredmerRadovaForma) this.getParent();
             prf.prikaziPodtipRadova(tp);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Podtipa radovas");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Podtipa radova");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

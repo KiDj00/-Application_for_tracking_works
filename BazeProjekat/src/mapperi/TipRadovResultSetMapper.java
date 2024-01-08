@@ -4,10 +4,8 @@
  */
 package mapperi;
 
-import domen.Mesto;
 import domen.Predmer;
 import domen.TipRadova;
-import domen.Zahtev;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

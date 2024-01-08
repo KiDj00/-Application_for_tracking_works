@@ -6,10 +6,6 @@ package forme;
 
 import domen.PodtipRadova;
 import domen.StavkaPodtipaRadova;
-import domen.TipRadova;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
 
@@ -274,7 +270,6 @@ public class AzurirajStavkuPodtipaRadovaForma extends javax.swing.JDialog {
             JOptionPane.showMessageDialog(this, "Morate popuniti sva polja!");
             return;
         }
-
         StavkaPodtipaRadova spr = new StavkaPodtipaRadova();
         spr.setKolicina(Integer.parseInt(txtKolicina.getText()));
         spr.setJedinicnaCena(Integer.parseInt(txtcena.getText()));
@@ -291,13 +286,13 @@ public class AzurirajStavkuPodtipaRadovaForma extends javax.swing.JDialog {
         spr.setStavkaId(stavka.getStavkaId());
         boolean uspesno = Kontroler.getInstanca().updateStavkaPodtipaRadova(spr);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Stavku Podtipa radova");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmeni Stavku podtipa radova");
             PredmerRadovaForma prf = (PredmerRadovaForma) this.getParent();
             prf.prikaziPodtipRadova(ptr.getTipradovaId());
             prf.prikaziStavkaPodtipRadova(ptr);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Stavke podtipa radova");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Stavke podtipa radova");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

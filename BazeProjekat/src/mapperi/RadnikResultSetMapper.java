@@ -5,7 +5,6 @@
 package mapperi;
 
 import domen.Radnik;
-import domen.RadnikDetalji;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

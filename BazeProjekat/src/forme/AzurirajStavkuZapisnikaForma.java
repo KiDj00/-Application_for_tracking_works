@@ -5,7 +5,6 @@
 package forme;
 
 import domen.Kompanija;
-import domen.Radnik;
 import domen.StavkaZapisnika;
 import domen.Zapisnik;
 import java.awt.Dialog;
@@ -14,14 +13,14 @@ import java.time.ZoneId;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *
  * @author Korisnik
  */
 public class AzurirajStavkuZapisnikaForma extends javax.swing.JDialog {
-    
+
     private final StavkaZapisnika stavka;
 
     /**
@@ -39,7 +38,7 @@ public class AzurirajStavkuZapisnikaForma extends javax.swing.JDialog {
         txtPDV.setText("" + stavka.getVrednost().getPdv());
         txtKomp.setText("" + stavka.getKompanija().getId());
         txtOpcija.setText("" + stavka.getOpcijaPonude());
-        
+
     }
 
     /**
@@ -339,7 +338,7 @@ public class AzurirajStavkuZapisnikaForma extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-         if (txtCena.getText().isEmpty() || txtOpcija.getText().isEmpty() || txtPDV.getText().isEmpty() || txtzapisnikid.getText().isEmpty() || txtstavkaid.getText().isEmpty()) {
+        if (txtCena.getText().isEmpty() || txtOpcija.getText().isEmpty() || txtPDV.getText().isEmpty() || txtzapisnikid.getText().isEmpty() || txtstavkaid.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Morate popuniti sva polja!");
             return;
         }
@@ -348,41 +347,50 @@ public class AzurirajStavkuZapisnikaForma extends javax.swing.JDialog {
 
             return;
         }
+        if (Integer.parseInt(txtCena.getText()) < 0) {
+            JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
+            return;
+        }
+        if (Integer.parseInt(txtPDV.getText()) > 1 || Integer.parseInt(txtPDV.getText()) <=0) {
+            JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
+            return;
+        }
+
         StavkaZapisnika sz = new StavkaZapisnika();
-        
+
         sz.setZapisnikId(stavka.getZapisnikId());
         sz.setStavkaId(stavka.getStavkaId());
         sz.setOpcijaPonude(Integer.parseInt(txtOpcija.getText()));
         Date garantnirok = jdcDateFrom1.getDate();
         sz.setGarantniRok(garantnirok.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-        
+
         Date rokZaObavljanje = jdcDateFrom2.getDate();
         sz.setRokZaObavljanje(rokZaObavljanje.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
-        
+
         UkupnaCena cena = new UkupnaCena();
         BigDecimal pdv = new BigDecimal(txtPDV.getText());
         BigDecimal vrednost = new BigDecimal(txtCena.getText());
         cena.setPdv(pdv);
         cena.setVrednost(vrednost);
-        BigDecimal ukupno =(pdv.multiply(vrednost)).add(vrednost);
+        BigDecimal ukupno = (pdv.multiply(vrednost)).add(vrednost);
         cena.setUkupna_cena(ukupno);
         sz.setVrednost(cena);
-        
+
         Kompanija k = new Kompanija();
         k.setId(Integer.parseInt(txtKomp.getText()));
         k.setNaziv(txtnaziv.getText());
         sz.setKompanija(k);
-        
+
         boolean uspesno = Kontroler.getInstanca().updateStavkaZapsinika(sz);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili Stavku zapisnika");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Stavku zapisnika");
             ZapisniciForma zf = (ZapisniciForma) this.getParent();
             zf.srediformu();
             Zapisnik z = Kontroler.getInstanca().vratiZapisnikPoStavki(sz);
             zf.PrikazStavki(z);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri izmeni Stavku zapisnika");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Stavke zapisnika");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

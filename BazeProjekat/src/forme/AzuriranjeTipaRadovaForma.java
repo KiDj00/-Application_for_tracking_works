@@ -218,13 +218,13 @@ public class AzuriranjeTipaRadovaForma extends javax.swing.JDialog {
         t.setPredmerID(p);
         boolean uspesno = Kontroler.getInstanca().updateTipRadova(t);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste izmenili Tip radova");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Tip radova");
             PredmerRadovaForma prf = (PredmerRadovaForma) this.getParent();
             prf.spremiFormu();
             prf.prikaziTipRadova(p);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri izmeni Tipa radova");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Tipa radova");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

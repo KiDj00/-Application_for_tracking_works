@@ -37,8 +37,8 @@ import mapperi.StavkaPodtipRadovaResultSetMapper;
 import mapperi.StavkaZapisnikaResultSetMapper;
 import mapperi.TipRadovResultSetMapper;
 import mapperi.ZapisnikResultSetMapper;
-import model.Pib;
-import model.UkupnaCena;
+import tipovi.Pib;
+import tipovi.UkupnaCena;
 
 /**
  *

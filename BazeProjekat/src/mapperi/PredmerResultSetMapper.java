@@ -4,11 +4,9 @@
  */
 package mapperi;
 
-import domen.Mesto;
-import domen.Nacelnik;
+
 import domen.Predmer;
 import domen.RadniNalog;
-import domen.Zahtev;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 

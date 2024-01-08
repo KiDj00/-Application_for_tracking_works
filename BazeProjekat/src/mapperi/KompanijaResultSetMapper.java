@@ -5,11 +5,9 @@
 package mapperi;
 
 import domen.Kompanija;
-import domen.RadnikOsnovno;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import model.Pib;
-import model.UkupnaCena;
+import tipovi.Pib;
 
 /**
  *

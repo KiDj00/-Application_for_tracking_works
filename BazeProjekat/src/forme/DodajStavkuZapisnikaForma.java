@@ -5,7 +5,6 @@
 package forme;
 
 import domen.Kompanija;
-import domen.Radnik;
 import domen.StavkaZapisnika;
 import domen.Zapisnik;
 import java.awt.Dialog;
@@ -15,8 +14,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.Pib;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *
@@ -343,6 +341,15 @@ public class DodajStavkuZapisnikaForma extends javax.swing.JDialog {
 
             return;
         }
+        if (Integer.parseInt(txtCena.getText()) < 0) {
+            JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
+            return;
+        }
+        if (Integer.parseInt(txtPDV.getText()) > 1 || Integer.parseInt(txtPDV.getText()) <= 0) {
+            JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
+            return;
+        }
+
         StavkaZapisnika sz = new StavkaZapisnika();
         int zapisnikID = Integer.parseInt(txtzapisnikid.getText());
         Zapisnik z = new Zapisnik();
@@ -373,14 +380,14 @@ public class DodajStavkuZapisnikaForma extends javax.swing.JDialog {
 
         boolean uspesno = Kontroler.getInstanca().insertStavkaZapsinika(sz);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Stavku zapisnika");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Stavku zapisnika");
             ZapisniciForma zf = (ZapisniciForma) this.getParent();
             zf.srediformu();
             Zapisnik za = Kontroler.getInstanca().vratiZapisnikPoStavki(sz);
             zf.PrikazStavki(za);
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Stavke zapisnika");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Stavke zapisnika");
         }
 
     }//GEN-LAST:event_jButton1ActionPerformed

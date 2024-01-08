@@ -4,17 +4,13 @@
  */
 package forme;
 
-import domen.Kompanija;
 import domen.Narudzbenica;
-import domen.StavkaPodtipaRadova;
 import java.awt.Color;
 import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import modelTabele.KompanijaModelTabele;
 import modelTabele.NarudzbenicaModelTabele;
-import modelTabele.StavkaPodtipaRadovaModelTabele;
 
 /**
  *
@@ -234,7 +230,7 @@ public class NarudzbeniceForma extends javax.swing.JDialog {
     private void btnUpdate1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdate1ActionPerformed
         final int selectedRow = tblNarudzbenica.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate izabrati Narudzbenicu koju zelite da izmenite!");
+            JOptionPane.showMessageDialog(this, "Morate izabrati Narudzbenicu koju želite da izmenite!");
             return;
         }
         NarudzbenicaModelTabele nmt = (NarudzbenicaModelTabele) tblNarudzbenica.getModel();
@@ -251,7 +247,7 @@ public class NarudzbeniceForma extends javax.swing.JDialog {
     private void btnDelete1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDelete1ActionPerformed
         final int selectedRow = tblNarudzbenica.getSelectedRow();
         if (selectedRow == -1) {
-            JOptionPane.showMessageDialog(this, "Morate selektovati podatke Narudzbenice koju zelite da obrisete", "Greska", JOptionPane.ERROR_MESSAGE);
+            JOptionPane.showMessageDialog(this, "Morate izabrati Narudžbenicu koju želite da obrisete", "Greška", JOptionPane.ERROR_MESSAGE);
             return;
         }
         int odgovor = JOptionPane.showConfirmDialog(this, "Da li ste sigurni?", "Potvrda", JOptionPane.YES_NO_OPTION);

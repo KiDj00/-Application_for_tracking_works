@@ -167,10 +167,10 @@ public class DodajJedinicuMereForma extends javax.swing.JDialog {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         boolean uspesno = Kontroler.getInstanca().dodajJedinicuMere(txtnaziv.getText());
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Jedinicu mere");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Jedinicu mere");
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Jedinice mere");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Jedinice mere");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

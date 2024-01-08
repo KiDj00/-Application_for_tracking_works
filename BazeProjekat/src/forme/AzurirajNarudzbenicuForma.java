@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.UkupnaCena;
+import tipovi.UkupnaCena;
 
 /**
  *
@@ -312,6 +312,14 @@ public class AzurirajNarudzbenicuForma extends javax.swing.JDialog {
 
             return;
         }
+        if (Integer.parseInt(txtcena.getText()) < 0) {
+            JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
+            return;
+        }
+        if (Integer.parseInt(txtpdv.getText()) > 1 || Integer.parseInt(txtpdv.getText()) <= 0) {
+            JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
+            return;
+        }
 
         Narudzbenica n = new Narudzbenica();
         n.setId(nGlobal.getId());
@@ -348,12 +356,12 @@ public class AzurirajNarudzbenicuForma extends javax.swing.JDialog {
 
         boolean uspesno = Kontroler.getInstanca().updateNarudzbenica(n);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Narudzbenicu");
+            JOptionPane.showMessageDialog(this, "Uspešno ste izmenili Narudžbenicu");
             NarudzbeniceForma nf = (NarudzbeniceForma) this.getParent();
             nf.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Narudzbenice");
+            JOptionPane.showMessageDialog(this, "Greška pri izmeni Narudžbenice");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -243,12 +243,12 @@ public class DodajRadnikaForma extends javax.swing.JDialog {
         radnik.setTelefon(txttel.getText());
         boolean uspesno = Kontroler.getInstanca().insertRadnik(radnik);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali radnika");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Radnika");
             RadniciForma dr = (RadniciForma) this.getParent();
             dr.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju radnika");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Radnika");
         }
 
 

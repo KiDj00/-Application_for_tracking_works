@@ -7,7 +7,7 @@ package forme;
 import domen.Kompanija;
 import javax.swing.JOptionPane;
 import logika.Kontroler;
-import model.Pib;
+import tipovi.Pib;
 
 /**
  *
@@ -344,12 +344,12 @@ public class DodajKompanijuForma extends javax.swing.JDialog {
         kompanija.setGrad(txtGrad.getText());
         boolean uspesno = Kontroler.getInstanca().insetKompanija(kompanija);
         if (uspesno) {
-            JOptionPane.showMessageDialog(this, "Uspesno ste dodali Kompaniju");
+            JOptionPane.showMessageDialog(this, "Uspešno ste dodali Kompaniju");
             KompanijeForma kf = (KompanijeForma) this.getParent();
             kf.refresujFormu();
             this.setVisible(false);
         } else {
-            JOptionPane.showMessageDialog(this, "Greska pri dodavanju Kompanije");
+            JOptionPane.showMessageDialog(this, "Greška pri dodavanju Kompanije");
         }
 
     }//GEN-LAST:event_jButton12ActionPerformed

@@ -4,7 +4,6 @@
  */
 package modelTabele;
 
-import domen.RadnikOsnovno;
 import domen.StavkaZapisnika;
 import java.util.ArrayList;
 import java.util.List;
