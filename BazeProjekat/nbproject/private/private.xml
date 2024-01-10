@@ -3,75 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Sektor.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Mesto.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/PodtipRadovaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajStavkuPodtipaRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/TipRadova.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/logika/Kontroler.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/RadniciForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajNarudzbenicuForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/StavkaPodtipaRadovaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/PozivZaDostavljanjePonude.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/tipovi/UkupnaCena.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/TipRadovaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/RadnikDetaljiResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajStavkuZapisnikaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajPodtipRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/ZapisniciForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajPodtipRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Kompanija.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajKompanijuForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Nacelnik.java</file>
             <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajNarudzbenicuForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/PredmerModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/dbb/DBBroker.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Zahtev.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/TipRadovResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajStavkuZapisnikaNAZIVForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/RadnikDetalji.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajPodtipRadovaCENAForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/KompanijeForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/ZapisnikModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/NarudzbenicaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/MainForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/PredmetNaloga.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajRadnikaForma.java</file>
+            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajStavkuZapisnikaForma.java</file>
             <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajStavkuZapisnikaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajJedinicuMereForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/RadnikOsnovno.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/StavkaZapisnika.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/RadnikResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/RadnikOsnovnoResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/StavkaZapisnikaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/ZahtevResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/RadniciDetaljiModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajKompanijuForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/RadniNalog.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/PredmetPoziva.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/KompanijaModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/NarudzbeniceForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/StavkaPodtipRadovaResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/modelTabele/RadniciOsnovnoModelTabele.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/kalendar/JDateChooserCellEditor.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/PodtipRadova.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/tipovi/Pib.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajStavkuPodtipaRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/PredmerResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Narudzbenica.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/KompanijaResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/PredmerRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzuriranjeTipaRadovaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Zapisnik.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajStavkuPodtipaRadovaNAZIVForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/NarudzbenicaResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/ZapisnikResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/Radnik.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajRadnikaForma.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/PredmetZahteva.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/StavkaZapisnikaResultSetMapper.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/domen/StrucniTim.java</file>
-            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/mapperi/PodtipRadovaResultSetMapper.java</file>
+            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/AzurirajStavkuZapisnikaNAZIVForma.java</file>
+            <file>file:/C:/Users/Korisnik/Desktop/Baze%203/projekat/BazeProjekat/src/forme/DodajNarudzbenicuForma.java</file>
         </group>
     </open-files>
 </project-private>

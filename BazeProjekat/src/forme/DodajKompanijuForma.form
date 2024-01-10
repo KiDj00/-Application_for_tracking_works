@@ -410,6 +410,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtid">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtidActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txtnaziv">
         </Component>

@@ -302,6 +302,7 @@ public class AzurirajNarudzbenicuForma extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
         if (txtMesto.getText().isEmpty() || txtNacelnik.getText().isEmpty() || txtNacin.getText().isEmpty() || txtZapisnik.getText().isEmpty() || txtcena.getText().isEmpty()
                 || txtid.getText().isEmpty() || txtpdv.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Morate popuniti sva polja!");
@@ -312,11 +313,13 @@ public class AzurirajNarudzbenicuForma extends javax.swing.JDialog {
 
             return;
         }
-        if (Integer.parseInt(txtcena.getText()) < 0) {
+        BigDecimal pdv = new BigDecimal(txtpdv.getText());
+        BigDecimal vrednost = new BigDecimal(txtcena.getText());
+        if (vrednost.compareTo(BigDecimal.ZERO) < 0) {
             JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
             return;
         }
-        if (Integer.parseInt(txtpdv.getText()) > 1 || Integer.parseInt(txtpdv.getText()) <= 0) {
+        if (pdv.compareTo(BigDecimal.ZERO) < 0 || pdv.compareTo(BigDecimal.ONE) > 0) {
             JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
             return;
         }
@@ -324,8 +327,6 @@ public class AzurirajNarudzbenicuForma extends javax.swing.JDialog {
         Narudzbenica n = new Narudzbenica();
         n.setId(nGlobal.getId());
         UkupnaCena cena = new UkupnaCena();
-        BigDecimal pdv = new BigDecimal(txtpdv.getText());
-        BigDecimal vrednost = new BigDecimal(txtcena.getText());
         cena.setPdv(pdv);
         cena.setVrednost(vrednost);
         BigDecimal ukupno = (pdv.multiply(vrednost)).add(vrednost);

@@ -205,7 +205,7 @@ public class DodajPodtipRadovaForma extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (txtcena.getText().isEmpty() || txtnaziv.getText().isEmpty() || txtpod.getText().isEmpty() || txttip.getText().isEmpty()) {
+        if ( txtnaziv.getText().isEmpty() || txtpod.getText().isEmpty() || txttip.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, "Morate popuniti sva polja!");
             return;
         }

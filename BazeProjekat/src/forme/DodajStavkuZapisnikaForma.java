@@ -341,11 +341,13 @@ public class DodajStavkuZapisnikaForma extends javax.swing.JDialog {
 
             return;
         }
-        if (Integer.parseInt(txtCena.getText()) < 0) {
+        BigDecimal pdv = new BigDecimal(txtPDV.getText());
+        BigDecimal vrednost = new BigDecimal(txtCena.getText());
+        if (vrednost.compareTo(BigDecimal.ZERO) < 0) {
             JOptionPane.showMessageDialog(this, "Cena mora biti pozitivna");
             return;
         }
-        if (Integer.parseInt(txtPDV.getText()) > 1 || Integer.parseInt(txtPDV.getText()) <= 0) {
+        if (pdv.compareTo(BigDecimal.ZERO) < 0 || pdv.compareTo(BigDecimal.ONE) > 0) {
             JOptionPane.showMessageDialog(this, "Pdv mora biti između 0 i 1");
             return;
         }
@@ -364,8 +366,7 @@ public class DodajStavkuZapisnikaForma extends javax.swing.JDialog {
         sz.setRokZaObavljanje(rokZaObavljanje.toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
 
         UkupnaCena cena = new UkupnaCena();
-        BigDecimal pdv = new BigDecimal(txtPDV.getText());
-        BigDecimal vrednost = new BigDecimal(txtCena.getText());
+
         BigDecimal ukupno = (pdv.multiply(vrednost)).add(vrednost);
         cena.setUkupna_cena(ukupno);
         cena.setPdv(pdv);
